@@ -9,7 +9,7 @@ Just Solving Algorithms For fun - From Basic to Advanced!
 
 ### AddOne 
 
-A Simple Algorithm that takes a single number as an argument and returns that number plus 1.
+A simple algorithm that takes a single number as an argument and returns that number plus 1.
 
 ```js
 function addOne(num) {
@@ -19,6 +19,20 @@ function addOne(num) {
 ```
 
 <hr>
+
+### AddTwo
+
+Another simple algorithm that accepts two numeric arguments and returns the sum of those two numbers.
+
+```js
+function addTwoNumbers(num1, num2) {
+  return num1 + num2;
+}
+```
+
+<hr>
+
+
 
 ### Convert From Celcius to Fahrenheit
 
