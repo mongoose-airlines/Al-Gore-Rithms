@@ -35,7 +35,10 @@ function addTwoNumbers(num1, num2) {
 
 ### Sum Numbers
 
-An algorithm that accepts a single array of numbers and returns the sum of the numbers in the array. However if the arr is empty, the algorithm return
+An algorithm that accepts a single array of numbers and returns the sum of the numbers in the array. However if the arr is empty, the algorithm return.
+
+I've added two different approaches to this problem below, the second one uses
+the reduce method available from the JavaScript Array API
 
 ```js
 function sumNumbers(arr) {
@@ -48,7 +51,54 @@ function sumNumbers(arr) {
   return sum;
 }
 
-/* An Alternative Approach */
+/* 
+  An Alternative Approach Using 
+  Ternary Expression With
+  the Array Reduce Method
+
+*/
+
+function sumNumbers(arr) {
+  return arr.length === 0 ? 0 
+  : arr.reduce((acc, elem) => (acc + elem), 0);
+}
+
+```
+
+
+<hr>
+
+### Addlist
+
+This algorithm accepts an unlimited quantity of numbers as arguments, adds them together and returns the resulting sum. However, if there are no arguments passed at function ivocation, the function will
+return 0 instead. I'm using the `arguments` function API for this exercise.
+
+
+Below I also introduce a different approach
+
+
+```js
+function addList() {
+  let sum = 0;
+  if(arguments.length > 0) {
+    for(let i = 0; i < arguments.length; i++) {
+      sum += arguments[i];
+    }
+  }
+  return sum;
+}
+
+/* 
+  An Alternative Approach Using the Spread Operator
+  Combined With Ternary Expression With the Array Reduce Method
+
+*/
+
+function addList(...nums) {
+  return nums.length === 0 ? 0 
+  : nums.reduce((acc, n) => (acc + n), 0);
+}
+
 
 ```
 
