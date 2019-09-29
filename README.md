@@ -33,6 +33,26 @@ function addTwoNumbers(num1, num2) {
 <hr>
 
 
+### Sum Numbers
+
+An algorithm that accepts a single array of numbers and returns the sum of the numbers in the array. However if the arr is empty, the algorithm return
+
+```js
+function sumNumbers(arr) {
+  let sum = 0;
+  if(arr.length > 0) {
+    for(let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+
+/* An Alternative Approach */
+
+```
+
+
 
 ### Convert From Celcius to Fahrenheit
 
