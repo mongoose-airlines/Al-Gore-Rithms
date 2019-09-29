@@ -7,6 +7,103 @@ Just Solving Algorithms For fun - From Basic to Advanced!
 
 <hr>
 
+### AddOne 
+
+A simple algorithm that takes a single number as an argument and returns that number plus 1.
+
+```js
+function addOne(num) {
+  return num + 1;
+}
+
+```
+
+<hr>
+
+### AddTwo
+
+Another simple algorithm that accepts two numeric arguments and returns the sum of those two numbers.
+
+```js
+function addTwoNumbers(num1, num2) {
+  return num1 + num2;
+}
+```
+
+<hr>
+
+
+### Sum Numbers
+
+An algorithm that accepts a single array of numbers and returns the sum of the numbers in the array. However if the arr is empty, the algorithm return.
+
+I've added two different approaches to this problem below, the second one uses
+the reduce method available from the JavaScript Array API
+
+```js
+function sumNumbers(arr) {
+  let sum = 0;
+  if(arr.length > 0) {
+    for(let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+
+/* 
+  An Alternative Approach Using 
+  Ternary Expression With
+  the Array Reduce Method
+
+*/
+
+function sumNumbersAlt(arr) {
+  return arr.length === 0 ? 0 
+  : arr.reduce((acc, elem) => (acc + elem), 0);
+}
+
+```
+
+
+<hr>
+
+### Addlist
+
+This algorithm accepts an unlimited quantity of numbers as arguments, adds them together and returns the resulting sum. However, if there are no arguments passed at function ivocation, the function will
+return 0 instead. I'm using the `arguments` function API for this exercise.
+
+
+Below I also introduce a different approach
+
+
+```js
+function addList() {
+  let sum = 0;
+  if(arguments.length > 0) {
+    for(let i = 0; i < arguments.length; i++) {
+      sum += arguments[i];
+    }
+  }
+  return sum;
+}
+
+/* 
+  An Alternative Approach Using the Spread Operator
+  Combined With Ternary Expression With the Array Reduce Method
+
+*/
+
+function addListAlt(...nums) {
+  return nums.length === 0 ? 0 
+  : nums.reduce((acc, n) => (acc + n), 0);
+}
+
+
+```
+
+
+
 ### Convert From Celcius to Fahrenheit
 
 The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.
@@ -31,6 +128,31 @@ Your result must be a string.
 ```js
 function reverseString(str) {
   return str.split("").reverse().join("");
+}
+```
+
+
+### Compute Remainder 
+
+This function accepts two numeric arguments and returns the remainder of the division of those two numbers. The first argument is the dividend and the second the divisor. However, this function is written in such a way that if 0 is passed as the second argument, `Infinity` will be returned instead
+
+I've also written an alternative approach without using the modulus operator
+
+```js
+function computeRemainder(n1, n2) {
+  return n2 === 0 ? Infinity : n1%n2;
+}
+
+/*
+  An alternative approach without using the modulus operator
+*/
+
+function computeRemainderAlt(n1, n2) {
+  if(n2 !== 0) {
+    return n1 - (Math.floor(n1 / n2) * n2)
+  } else {
+    return Infinity
+  }
 }
 ```
 
