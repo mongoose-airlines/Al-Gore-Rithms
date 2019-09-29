@@ -7,6 +7,19 @@ Just Solving Algorithms For fun - From Basic to Advanced!
 
 <hr>
 
+### AddOne 
+
+A Simple Algorithm that takes a single number as an argument and returns that number plus 1.
+
+```js
+function addOne(num) {
+  return num + 1;
+}
+
+```
+
+<hr>
+
 ### Convert From Celcius to Fahrenheit
 
 The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.
