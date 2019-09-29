@@ -58,7 +58,7 @@ function sumNumbers(arr) {
 
 */
 
-function sumNumbers(arr) {
+function sumNumbersAlt(arr) {
   return arr.length === 0 ? 0 
   : arr.reduce((acc, elem) => (acc + elem), 0);
 }
@@ -94,7 +94,7 @@ function addList() {
 
 */
 
-function addList(...nums) {
+function addListAlt(...nums) {
   return nums.length === 0 ? 0 
   : nums.reduce((acc, n) => (acc + n), 0);
 }
@@ -128,6 +128,31 @@ Your result must be a string.
 ```js
 function reverseString(str) {
   return str.split("").reverse().join("");
+}
+```
+
+
+### Compute Remainder 
+
+This function accepts two numeric arguments and returns the remainder of the division of those two numbers. The first argument is the dividend and the second the divisor. However, this function is written in such a way that if 0 is passed as the second argument, `Infinity` will be returned instead
+
+I've also written an alternative approach without using the modulus operator
+
+```js
+function computeRemainder(n1, n2) {
+  return n2 === 0 ? Infinity : n1%n2;
+}
+
+/*
+  An alternative approach without using the modulus operator
+*/
+
+function computeRemainderAlt(n1, n2) {
+  if(n2 !== 0) {
+    return n1 - (Math.floor(n1 / n2) * n2)
+  } else {
+    return Infinity
+  }
 }
 ```
 
