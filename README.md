@@ -300,6 +300,23 @@ function titleCase(str) {
 }
 ```
 
+This can also be solved breaking it up into two seperate functions using a helper function:
+
+```js
+function capFirstChar(str) {
+  str = str.toLowerCase().split("");
+  str[0] = str[0].toUpperCase();
+  return str.join("");
+}
+
+
+function titleCase(str) {
+  return str.split(" ")
+  .map((elem) => elem = capFirstChar(elem))
+  .join(" ")
+}
+```
+
 <hr>
 
 ### Slice and Splice
